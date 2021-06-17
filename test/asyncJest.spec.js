@@ -8,10 +8,10 @@ a função recebe como parâmetro true e false, respectivamente.
 */
 
 describe('o retorno do telefonema', () => {
-  test('atende', () => {
-    expect(answerPhone(true)).resolves.toBe('Oi!');
+  test('atende', async () => {
+    await expect(answerPhone(true)).resolves.toEqual('Oi!');
   });
-  test('ocupado', () => {
-    expect(answerPhone(false)).rejects.toBe('Infelizmente não podemos atender...');
+  test('ocupado', async () => {
+    expect(answerPhone(false)).rejects.toEqual(Error('Infelizmente não podemos atender...'));
   });
 });
