@@ -12,10 +12,9 @@ describe('o retorno do telefonema', () => {
   test('atende', () => {
     expect(answerPhone(true)).resolves.toBe('Oi');
 
-    // Insira seu teste assíncrono aqui
   });
   test('ocupado', () => {
     expect(answerPhone(false)).rejects.toBe('Infelizmente não podemos atender...');
-    // Insira seu teste assíncrono aqui
+    
   });
 });
