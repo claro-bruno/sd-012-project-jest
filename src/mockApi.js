@@ -1,4 +1,4 @@
-// ATENÇÃO!!! Não edite este arquivo. Altere apenas os arquivos da pasta 'test'.
+// ATENÇÃO!!! Não edite este arquivo.. Altere apenas os arquivos da pasta 'test'.
 const https = require('https');
 
 const url = 'https://randomuser.me/api/';
