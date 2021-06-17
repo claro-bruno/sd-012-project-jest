@@ -26,16 +26,15 @@ const inf = {
   name: { first: 'Antônio', last: 'Britto' },
   location: {
     country: 'Brazil',
-    },
+  },
   email: 'tunico@bol.com.br',
   login: {
     username: 'tunicao123',
     password: '1234567890',
-  }
-}
+  },
+};
 describe('verifica o usuário', () => {
   api.fetchURL = jest.fn().mockImplementation(async () => inf);
-  
 
   test('verifica se o usuário é o tunico', async () => (
     api.fetchURL().then((user) => {
