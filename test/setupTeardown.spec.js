@@ -25,6 +25,8 @@ describe('quem sobreviveu?', () => {
     return console.log(adventure.specialists);
   });
 
+  afterAll(() => console.log(`The last hero up is ${adventure.specialists[0].nome}`));
+
   test('depois da primeira aventura', () => {
     expect(adventure.specialists.length).toBe(5);
   });
@@ -39,6 +41,5 @@ describe('quem sobreviveu?', () => {
   });
   test('depois da quinta aventura', () => {
     expect(adventure.specialists.length).toBe(1);
-    console.log(`The last hero up is ${adventure.specialists[0].nome}`);
   });
 });
