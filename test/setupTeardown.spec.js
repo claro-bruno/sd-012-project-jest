@@ -20,21 +20,29 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('quem sobreviveu?', () => {
-  // Adicione seu código aqui
-
   test('depois da primeira aventura', () => {
+    adventure.randomAttack();
     expect(adventure.specialists.length).toBe(5);
+    console.log(adventure.specialists);
   });
   test('depois da segunda aventura', () => {
+    adventure.randomAttack();
     expect(adventure.specialists.length).toBe(4);
+    console.log(adventure.specialists);
   });
   test('depois da terceira aventura', () => {
+    adventure.randomAttack();
     expect(adventure.specialists.length).toBe(3);
+    console.log(adventure.specialists);
   });
   test('depois da quarta aventura', () => {
+    adventure.randomAttack();
     expect(adventure.specialists.length).toBe(2);
+    console.log(adventure.specialists);
   });
   test('depois da quinta aventura', () => {
+    adventure.randomAttack();
     expect(adventure.specialists.length).toBe(1);
+    console.log(`The last hero up is ${adventure.specialists[0].nome}`);
   });
 });
