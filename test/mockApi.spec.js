@@ -23,9 +23,14 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('verifica o usuário', () => {
-  const https = jest.mock('https');
-
-  https.get.mockImplementation(async () => {});
+  api.fetchURL = jest.spyOn(api, 'fetchURL')
+    .mockImplementation(async () => ({
+      gender: 'male',
+      name: { first: 'Antônio', last: 'Britto' },
+      location: { country: 'Brazil' },
+      email: 'tunico@bol.com.br',
+      login: { username: 'tunicao123', password: '1234567890' },
+    }));
 
   test('verifica se o usuário é o tunico', async () => (
     api.fetchURL().then((user) => {
