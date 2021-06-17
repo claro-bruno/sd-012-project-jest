@@ -24,8 +24,8 @@ describe('verifica as funções e os mocks', () => {
   mockFunctions.power.mockImplementation((a, b) => a ** b);
   mockFunctions.factorial.mockImplementation((a) => {
     let fact = 1;
-    for (let index = 0; index <= a; index += 1) {
-      fact *= 1;
+    for (let index = 1; index <= a; index += 1) {
+      fact *= index;
     }
     return fact;
   });
