@@ -26,9 +26,8 @@ describe('verifica as funções e os mocks', () => {
   /** Esta parte foi tirada no endereço a seguir:
   * https://qastack.com.br/programming/3959211/what-is-the-fastest-factorial-function-in-javascript
   */
-  mockFunctions.factorial.mockImplementation((a) => {
-    return (a < 2) ? 1 : mockFunctions.factorial(a - 1) * a;
-  });
+  mockFunctions.factorial.mockImplementation((a) => ((a < 2)
+    ? 1 : mockFunctions.factorial(a - 1) * a));
 
   test('testa função add', () => {
     expect(mockFunctions.add(1, 2)).toEqual(3);
