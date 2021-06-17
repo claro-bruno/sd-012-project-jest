@@ -1,4 +1,5 @@
 const mockFunctions = require('../src/mockFunctions');
+
 jest.mock('../src/mockFunctions');
 /*
 Criamos uma série de funções com eficiência duvidosa.
@@ -20,15 +21,15 @@ describe('verifica as funções e os mocks', () => {
   mockFunctions.multiply.mockImplementation((a, b) => a * b);
   mockFunctions.divide.mockImplementation((a, b) => a / b);
   mockFunctions.power.mockImplementation((a, b) => {
-    let pow = a ;
+    let pow = a;
     if (a !== 0 && b !== 0) {
       for (let i = 1; i < b; i += 1) {
-        pow = pow * a;
+        pow *= a;
       }
     } else {
       pow = 1;
     }
-    return pow
+    return pow;
   });
   mockFunctions.factorial.mockImplementation((a) => {
     let fact = 1;
