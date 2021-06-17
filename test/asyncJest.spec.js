@@ -1,5 +1,5 @@
-const assert = require('assert');
-const { exception } = require('console');
+// const assert = require('assert');
+// const { exception } = require('console');
 const answerPhone = require('../src/asyncJest');
 /*
 A função answerPhone recebe um parâmetro boleano.
@@ -12,14 +12,32 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('o retorno do telefonema', () => {
-  test('atende', (done) => {
-    // Insira seu teste assíncrono aqui
-    answerPhone('true').then(out => expect(out)).toBe('Oi!');
-    done();
+  test('atende', () => {
+    expect.assertions(1);
+    return answerPhone(true).then((data) => {
+      expect(data).toBe('Oi!');
+    });
   });
-  test('ocupado', (done) => {
-    // Insira seu teste assíncrono aqui
-    answerPhone('false').catch(out => expect(out).toBe('Infelizmente não podemos atender...'));
-    done();
+  test('ocupado', () => {
+    expect.assertions(1);
+    return answerPhone(false)
+      .catch((out) => expect(out).toEqual(new Error('Infelizmente não podemos atender...'))); // uso catch por conta do new Error da func.
+  });
+});
+
+//  async
+describe('o retorno do telefonema sync e reject', () => {
+  test('atende', async () => expect(await answerPhone(true)).toBe('Oi!'));
+  test('ocupado', () => {
+    expect.assertions(1);
+    return expect(answerPhone(false))
+      .rejects.toThrow('Infelizmente não podemos atender...'); // uso toThrow, para achar o erro com rejects.
+  });
+});
+
+describe('o retorno do telefonema resolves', () => {
+  test('atende', () => {
+    expect.assertions(1);
+    return expect(answerPhone(true)).resolves.toBe('Oi!');
   });
 });
