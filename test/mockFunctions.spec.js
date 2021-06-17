@@ -16,7 +16,19 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 
 describe('verifica as funções e os mocks', () => {
   // Crie suas mock functions aqui
-
+  mockFunctions.add = jest.fn().mockImplementation((a, b) => a + b);
+  mockFunctions.subtract = jest.fn().mockImplementation((a, b) => a - b);
+  mockFunctions.multiply = jest.fn().mockImplementation((a, b) => a * b);
+  mockFunctions.divide = jest.fn().mockImplementation((a, b) => a / b);
+  mockFunctions.power = jest.fn().mockImplementation((a, b) => (a ** b));
+  // https://pt.stackoverflow.com/questions/412606/calculadora-de-pot%C3%AAncia-em-javascript,
+  // consultei para fazer a exponenciação, usando o Math.pow, mas o lint diz para alterar para **
+  mockFunctions.factorial = jest.fn().mockImplementation((a) => {
+    if (a === 0 || a === 1) return 1;
+    return a * mockFunctions.factorial(a - 1);
+  });
+  // https://gist.github.com/macsousa/dccd2abb2c68c5958846824e975482d3
+  // consultei para realizar a fatoração
   test('testa função add', () => {
     expect(mockFunctions.add(1, 2)).toEqual(3);
     expect(mockFunctions.add(8, 37)).toEqual(45);
