@@ -25,6 +25,6 @@
     "acorn": "5.7.4",
     "eslint-config-trybe-fundamentals": "1.1.0",
     "jest": "24.9.0",
-    "minimist": "1.2.2"
+    "minimist": "^1.2.5"
   }
 }
