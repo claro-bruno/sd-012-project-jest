@@ -10,13 +10,23 @@ a função recebe como parâmetro true e false, respectivamente.
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
+const answerPhone = require('../src/asyncJest');
+
 describe('o retorno do telefonema', () => {
-  test('atende', () => {
+  test('atende', async () => {
     // assert.fail();
-    // Insira seu teste assíncrono aqui
+    expect.assertions(1);
+    const answer = await answerPhone('Alo');
+    expect(answer).toEqual('Oi!');
   });
-  test('ocupado', () => {
+  test('ocupado', async () => {
     // assert.fail();
-    // Insira seu teste assíncrono aqui
+    expect.assertions(1);
+    try {
+      const answer = await answerPhone();
+      expect(answer).toEqual('Oi!');
+    } catch (error) {
+      expect(error.message).toBe('Infelizmente não podemos atender...');
+    }
   });
 });
