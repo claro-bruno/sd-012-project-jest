@@ -1,8 +1,6 @@
 // const assert = require('assert');
 const answerPhone = require('../src/asyncJest');
-const answ = require('../src/asyncJest');
-// let fetch = require('node-fetch');
-// jest.mode('node-fetch');
+
 /*
 A função answerPhone recebe um parâmetro boleano.
 Dependendo do parâmetro o retorno da função varia, veja a função no arquivo 'src/asyncJest.js'
@@ -18,8 +16,11 @@ describe('o retorno do telefonema', () => {
     const data = await answerPhone(true);
     expect(data).toEqual('Oi!');
   });
-  test('ocupado', () => {
-
-    // Insira seu teste assíncrono aqui
+  test('ocupado', async () => {
+    try {
+      await answerPhone(false);
+    } catch (error) {
+      expect(error).toEqual(new Error('Infelizmente não podemos atender...'));
+    }
   });
 });
