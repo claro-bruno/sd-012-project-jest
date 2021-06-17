@@ -1,4 +1,4 @@
-const adventure = require('../src/setupTeardown');
+// const adventure = require('../src/setupTeardown');
 /*
 Num universo não tão distante, um grupo de aventureiros da Trybe enfrentam uma série de testes.
 O grupo parte em direção ao sucesso, mas,
@@ -19,22 +19,22 @@ PS: Os codinomes dos aventureiros são reais! Tentem descobrir quem é quem!
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
-describe('quem sobreviveu?', () => {
-  // Adicione seu código aqui
+// describe('quem sobreviveu?', () => {
+//   // Adicione seu código aqui
 
-  test('depois da primeira aventura', () => {
-    expect(adventure.specialists.length).toBe(5);
-  });
-  test('depois da segunda aventura', () => {
-    expect(adventure.specialists.length).toBe(4);
-  });
-  test('depois da terceira aventura', () => {
-    expect(adventure.specialists.length).toBe(3);
-  });
-  test('depois da quarta aventura', () => {
-    expect(adventure.specialists.length).toBe(2);
-  });
-  test('depois da quinta aventura', () => {
-    expect(adventure.specialists.length).toBe(1);
-  });
-});
+//   test('depois da primeira aventura', () => {
+//     expect(adventure.specialists.length).toBe(5);
+//   });
+//   test('depois da segunda aventura', () => {
+//     expect(adventure.specialists.length).toBe(4);
+//   });
+//   test('depois da terceira aventura', () => {
+//     expect(adventure.specialists.length).toBe(3);
+//   });
+//   test('depois da quarta aventura', () => {
+//     expect(adventure.specialists.length).toBe(2);
+//   });
+//   test('depois da quinta aventura', () => {
+//     expect(adventure.specialists.length).toBe(1);
+//   });
+// });
