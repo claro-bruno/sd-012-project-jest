@@ -16,6 +16,7 @@ const factorial = (a) => {
   }
   return fact;
 };
+console.log(factorial(2));
 
 const add = (a, b) => a - b;
 
