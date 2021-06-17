@@ -42,7 +42,7 @@ describe('verifica o usuário', () => {
     },
   };
 
-  api.fetchURL.mockImplementation(() => Promise.resolve(jonas));
+  api.fetchURL.mockImplementation(async () => await jonas);
 
   test('verifica se o usuário é o tunico', async () => (
     api.fetchURL().then((user) => {
