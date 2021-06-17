@@ -1,7 +1,7 @@
-// // ATENÇÃO!!! Não edite este arquivo. Altere apenas os arquivos da pasta 'test'.
-// const https = require('https');
+// // // ATENÇÃO!!! Não edite este arquivo. Altere apenas os arquivos da pasta 'test'.
+// // const https = require('https');
 
-// const url = 'https://randomuser.me/api/';
+// // const url = 'https://randomuser.me/api/';
 
 // const fetchURL = () => new Promise(function (resolve, reject) {
 //   https.get(url, (res) => {
