@@ -11,18 +11,18 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('o retorno do telefonema', () => {
-  test('atende', () => {
+  test('atende', async () => {
     // const waitingAnswer = await answerPhone(true); (com async)
     // console.log(waitingAnswer); se eu coloco o console.log antes recebo "Promise { Oi! }". quando coloco aqui dentro, recebo só "Oi!" pq? pq a promise foi resolvida depois do await
-    expect(answerPhone(true)).resolves.toBe('Oi!');
+    await expect(answerPhone(true)).resolves.toBe('Oi!');
   });
-  test('ocupado', () => {
+  test('ocupado', async () => {
     expect.assertions(1);
     // try {
     //  await answerPhone(false);
     // } catch (error) {
     //   expect(error).toEqual(new Error('Infelizmente não podemos atender...'));
     // };
-    expect(answerPhone(false)).rejects.toEqual(new Error('Infelizmente não podemos atender...'));
+    await expect(answerPhone(false)).rejects.toEqual(new Error('Infelizmente não podemos atender...'));
   });
 });
