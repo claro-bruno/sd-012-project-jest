@@ -25,7 +25,8 @@ describe('verifica as funções e os mocks', () => {
 
   mockFunctions.power.mockImplementation((a, b) => {
     let pow = a;
-    for (let i = 0; i < b; i += 1) {
+    if (!a || !b) return 1;
+    for (let i = 1; i < b; i += 1) {
       pow = mockFunctions.multiply(pow, a);
     }
     return pow;
