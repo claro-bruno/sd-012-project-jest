@@ -21,28 +21,26 @@ Dica: Utilizem os métodos jest.fn() ou jest.spyOn().
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
+const objJSON = {
+  gender: 'male',
+  name: {
+    first: 'Antônio',
+    last: 'Britto',
+  },
+  location: {
+    country: 'Brazil',
+  },
+  email: 'tunico@bol.com.br',
+  login: {
+    username: 'tunicao123',
+    password: '1234567890',
+  },
+};
+
 describe('verifica o usuário', () => {
   api.fetchURL = jest
     .fn()
-    .mockImplementation(async () => ({
-      setEncoding: async () => [{
-        user: {
-          gender: 'male',
-          name: {
-            first: 'Antônio',
-            last: 'Britto',
-          },
-          location: {
-            country: 'Brazil',
-          },
-          email: 'tunico@bol.com.br',
-          login: {
-            username: 'tunicao123',
-            password: '1234567890',
-          },
-        },
-      }],
-    }));
+    .mockImplementation(async () => objJSON);
 
   test('verifica se o usuário é o tunico', async () => (
     api.fetchURL().then((user) => {
