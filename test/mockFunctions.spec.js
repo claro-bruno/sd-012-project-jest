@@ -21,16 +21,16 @@ describe('verifica as funções e os mocks', () => {
   mockFunctions.subtract = jest.fn()
     .mockImplementation((a, b) => a - b);
   mockFunctions.multiply = jest.fn()
-    .mockImplementation((a , b) => a * b);
+    .mockImplementation((a, b) => a * b);
   mockFunctions.divide = jest.fn()
     .mockImplementation((a, b) => a / b);
   mockFunctions.power = jest.fn()
     .mockImplementation((a, b) => {
-    let pow = 1;
-    for (let i = 0; i < b; i += 1) {
-      pow = pow * a;
-    }
-    return pow;
+      let pow = 1;
+      for (let i = 0; i < b; i += 1) {
+        pow *= a;
+      }
+      return pow;
     });
   mockFunctions.factorial = jest.fn()
     .mockImplementation((a) => {
@@ -39,7 +39,7 @@ describe('verifica as funções e os mocks', () => {
         fact *= (a - i);
       }
       return fact;
-    })
+    });
 
   test('testa função add', () => {
     expect(mockFunctions.add(1, 2)).toEqual(3);
