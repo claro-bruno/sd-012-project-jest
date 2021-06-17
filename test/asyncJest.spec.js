@@ -24,7 +24,6 @@ describe('o retorno do telefonema', () => {
     try {
       await answerPhone();
     } catch (error) {
-      // expect(error).toBeInstanceOf(TypeError);
       expect(error).toHaveProperty('message', 'Infelizmente não podemos atender...');
     }
   });
