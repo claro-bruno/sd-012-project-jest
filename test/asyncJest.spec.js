@@ -9,14 +9,13 @@ a função recebe como parâmetro true e false, respectivamente.
 
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
+// XHABLAU 
 
 describe('o retorno do telefonema', () => {
   test('atende', () => {
-    assert.fail();
     // Insira seu teste assíncrono aqui
   });
   test('ocupado', () => {
-    assert.fail();
     // Insira seu teste assíncrono aqui
   });
 });
