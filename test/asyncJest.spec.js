@@ -18,10 +18,12 @@ describe('o retorno do telefonema', () => {
     expect(answer).toEqual('Oi!');
   });
   test('ocupado', async () => {
+    expect.assertions(1);
+
     try {
       await answerPhone(false);
     } catch (error) {
-      expect(error).toTrow(/Infelizmente não podemos atender.../);
+      expect(error).toEqual(new Error('Infelizmente não podemos atender...'));
     }
   });
 });
