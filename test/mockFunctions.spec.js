@@ -15,19 +15,13 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('verifica as funções e os mocks', () => {
-  mockFunctions.add = jest
-    .fn((a, b) => a + b);
-  mockFunctions.subtract = jest
-    .fn((a, b) => a - b);
-  mockFunctions.multiply = jest
-    .fn((a, b) => a * b);
-  mockFunctions.divide = jest
-    .fn((a, b) => a / b);
-  mockFunctions.power = jest
-    .fn((a, b) => a ** b);
-  mockFunctions.factorial = jest
-    .fn((num) =>
-      ((num > 1) ? num * mockFunctions.factorial(num - 1) : 1));
+  mockFunctions.add = jest.fn((a, b) => a + b);
+  mockFunctions.subtract = jest.fn((a, b) => a - b);
+  mockFunctions.multiply = jest.fn((a, b) => a * b);
+  mockFunctions.divide = jest.fn((a, b) => a / b);
+  mockFunctions.power = jest.fn((a, b) => a ** b);
+  mockFunctions.factorial = jest.fn((num) =>
+    ((num > 1) ? num * mockFunctions.factorial(num - 1) : 1));
 
   test('testa função add', () => {
     expect(mockFunctions.add(1, 2)).toEqual(3);
