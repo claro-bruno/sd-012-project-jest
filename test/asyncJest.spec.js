@@ -13,11 +13,8 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('o retorno do telefonema', () => {
-  test('atende', async () => {
-    return answerPhone(true).then((resolve) => {
-      expect(resolve).toEqual('Oi!');
-    });
-  });
+  test('atende', async () => expect(answerPhone(true)).resolves
+    .toEqual('Oi!'));
   test('ocupado', async () => expect(answerPhone(false)).rejects
     .toThrow('Infelizmente não podemos atender...'));
 });
