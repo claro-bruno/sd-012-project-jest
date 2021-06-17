@@ -23,9 +23,8 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('verifica o usuário', () => {
-  
   test('verifica se o usuário é o tunico', () => {
-    api.fetchURL = jest.fn().mockImplementation(async () => ({ 
+    api.fetchURL = jest.fn().mockImplementation(async () => ({
       gender: 'male',
       name: { first: 'Antônio', last: 'Britto' },
       location: { country: 'Brazil' },
@@ -40,6 +39,6 @@ describe('verifica o usuário', () => {
       expect(user.email).toEqual('tunico@bol.com.br');
       expect(user.login.username).toEqual('tunicao123');
       expect(user.login.password).toEqual('1234567890');
-    })
+    });
   });
 });
