@@ -13,14 +13,14 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 // Resolve requisito 01
 
 describe('o retorno do telefonema', () => {
-  test('atende', () => {
+  test('atende', async () => {
     // assert.fail();
-    expect.assertions(1);
-    expect(answerPhone(true)).resolves.toBe('resolve');
+    // expect.assertions(1);
+    await expect(answerPhone(true)).resolves.toBe('Oi!');
   });
-  test('ocupado', () => {
+  test('ocupado', async () => {
     // assert.fail();
-    expect.assertions(1);
-    expect(answerPhone(false)).rejects.toThrow('reject');
+    // expect.assertions(1);
+    await expect(answerPhone(false)).rejects.toThrowError('Infelizmente não podemos atender...');
   });
 });
