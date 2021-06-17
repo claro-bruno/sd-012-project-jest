@@ -21,9 +21,6 @@ Dica: Utilizem os métodos jest.fn() ou jest.spyOn().
 
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
-const reposFake = {
-
-}
 
 describe('verifica o usuário', () => {
   // Crie sua mock da função fetchURL() aqui
@@ -31,7 +28,7 @@ describe('verifica o usuário', () => {
   apiURL.mockResolvedValue({
     gender: 'male',
     name: { first: 'Antônio', last: 'Britto' },
-    location: { country: 'Brazil'},
+    location: { country: 'Brazil' },
     email: 'tunico@bol.com.br',
     login: { username: 'tunicao123', password: '1234567890' },
   });
