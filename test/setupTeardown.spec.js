@@ -22,7 +22,7 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 describe('quem sobreviveu?', () => {
   // Adicione seu código aqui
   beforeEach(() => {
-    adventure.specialists.length -= 1;
+    adventure.randomAttack();
   });
 
   test('depois da primeira aventura', () => {
