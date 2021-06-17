@@ -1,4 +1,4 @@
-// ATENÇÃO!!! Não edite este arquivo. Altere apenas os arquivos da pasta 'test'. VQV
+// ATENÇÃO!!! Não edite este arquivo. Altere apenas os arquivos da pasta 'test'.
 const answerPhone = (answer) =>
   new Promise(function (resolve, reject) {
     setTimeout(
