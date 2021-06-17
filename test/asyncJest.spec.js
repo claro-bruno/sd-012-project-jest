@@ -10,13 +10,28 @@ a função recebe como parâmetro true e false, respectivamente.
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
-describe('o retorno do telefonema', () => {
+/* describe('o retorno do telefonema', () => {
   test('atende', async () => {
+    expect.assertions(1);
     await expect(answerPhone(true)).resolves.toBe('Oi!');
   });
   test('ocupado', async () => {
+    expect.assertions(1);
     await expect(answerPhone(false)).rejects.toEqual(
       new Error('Infelizmente não podemos atender...'),
     );
   });
+}); */
+
+describe('o retorno do telefonema', () => {
+  test('atende', () =>
+    answerPhone(true).then((answer) => {
+      expect.assertions(1);
+      expect(answer).toBe('Oi!');
+    }));
+  test('ocupado', () =>
+    answerPhone(false).catch((error) => {
+      expect.assertions(1);
+      expect(error).toEqual(new Error('Infelizmente não podemos atender...'));
+    }));
 });
