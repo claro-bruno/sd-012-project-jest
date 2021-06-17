@@ -14,12 +14,13 @@ describe('o retorno do telefonema', () => {
   test('atende', async () => {
     // assert.fail();
     // Insira seu teste assíncrono aqui
-    await expect(answerPhone(true)).resolves.toBe('Oi!');
+    await expect(answerPhone(true))
+      .resolves.toBe('Oi!');
   });
   test('ocupado', async () => {
     // assert.fail();
     // Insira seu teste assíncrono aqui
-    const stringError = 'Infelizmente não podemos atender...';
-    await expect(answerPhone(false)).rejects.toEqual(new Error(stringError));
+    await expect(answerPhone(false))
+      .rejects.toEqual(new Error('Infelizmente não podemos atender...'));
   });
 });
