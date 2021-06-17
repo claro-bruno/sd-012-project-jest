@@ -21,7 +21,7 @@ describe('o retorno do telefonema', () => {
   test('ocupado', () => {
     expect.assertions(1);
     return answerPhone(false)
-      .catch((out) => expect(out).toEqual(new Error('Infelizmente não podemos atender...'))); // uso catch por conta do new Error da func.
+      .catch((out) => expect(out).toEqual(new Error('Infelizmente não podemos atender...'))); // uso new Error por conta do catch, e por conta da func
   });
 });
 
