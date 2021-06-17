@@ -59,7 +59,7 @@ Lembre-se de **não modificar** os arquivos da pasta `src`, o objetivo do projet
 
 Para testar se os requisitos estão passando, você pode executar os testes na sua máquina com o comando `npm test nome-arquivo.test`. É muito importante que você **não modifique nenhum arquivo da pasta src**. Alterá-los pode fazer com que o seu requisito não passe no avaliador automático.
 
-Em cada `describe` existe uma função `assert.fail()` para que o avalidor teste o seu código corretamente **comente** ou **retire** essa função. 
+Em cada `describe` existe uma função `assert.fail()` para que o avaliador teste o seu código corretamente **comente** ou **retire** essa função. 
 
 Lembre-se também de **não modificar** os describes dos tests na pasta `test`. Alterá-los pode fazer com que o seu requisito não passe no avaliador automático.
 
