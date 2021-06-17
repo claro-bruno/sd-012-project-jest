@@ -23,7 +23,8 @@ describe('quem sobreviveu?', () => {
   // Adicione seu código aqui
   beforeEach(adventure.randomAttack);
   afterEach(() => console.log(adventure.specialists));
-  afterAll(() => console.log(`O unico a sobreviver foi: ${adventure.specialists[0].nome}`));
+  afterAll(() => console.log(`The only a sobreviver is: ${adventure.specialists[0].nome}`));
+  // Aproveitando que ta misturado pt-br com inglês.
 
   test('depois da primeira aventura', () => {
     expect(adventure.specialists.length).toBe(5);

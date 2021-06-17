@@ -14,13 +14,19 @@ describe('o retorno do telefonema', () => {
   test('atende', async () => {
     expect.assertions(1);
     await expect(answerPhone(true)).resolves.toBe('Oi!');
+    /* Alternativa sem o await, precisaria só remover o async do test atende */
+    // return expect(answerPhone(true)).resolves.toBe('Oi!');
   });
-  test('ocupado', async () => {
+  test('ocupado', () => {
     expect.assertions(1);
-    try {
-      await answerPhone(false);
-    } catch (error) {
-      expect(error).toEqual(new Error('Infelizmente não podemos atender...'));
-    }
+    return expect(answerPhone(false)).rejects.toEqual(new Error(
+      'Infelizmente não podemos atender...',
+    ));
+    /* Alternativa usando o Try e Catch, precisaria por async no test ocupado */
+    // try {
+    //   await answerPhone(false);
+    // } catch (error) {
+    // expect(error).toEqual(new Error('Infelizmente não podemos atender...'));
+    // }
   });
 });
