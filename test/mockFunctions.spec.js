@@ -25,13 +25,13 @@ describe('verifica as funções e os mocks', () => {
   mockFunctions.subtract.mockImplementation((a, b) => a - b);
   mockFunctions.multiply.mockImplementation((a, b) => a * b);
   mockFunctions.divide.mockImplementation((a, b) => a / b);
-  mockFunctions.power.mockImplementation((a, b) => Math.pow(a, b));
+  mockFunctions.power.mockImplementation((a, b) => (a ** b));
   mockFunctions.factorial.mockImplementation((a) => {
     if (a === 0 || a === 1) {
       return 1;
     }
     return a * mockFunctions.factorial(a - 1);
-  })
+  });
 
   test('testa função add', () => {
     expect(mockFunctions.add(1, 2)).toEqual(3);
