@@ -38,11 +38,11 @@ describe('verifica o usuário', () => {
     email: 'tunico@bol.com.br',
     login: {
       username: 'tunicao123',
-      password: '1234567890'
-    }
-  }
+      password: '1234567890',
+    },
+  };
 
-  api.fetchURL.mockImplementation(() => Promise.resolve(jonas))
+  api.fetchURL.mockImplementation(() => Promise.resolve(jonas));
 
   test('verifica se o usuário é o tunico', async () => (
     api.fetchURL().then((user) => {
