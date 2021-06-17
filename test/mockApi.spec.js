@@ -1,4 +1,4 @@
-const api = require('../src/mockApi');
+// const api = require('../src/mockApi');
 
 /*
 A função fetchURL retorna um JSON com informações de um usuário aleatório buscadas da API 'randomuser.me'.
