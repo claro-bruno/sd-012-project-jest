@@ -20,7 +20,11 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('quem sobreviveu?', () => {
-  // Adicione seu código aqui
+  jest.spyOn(adventure, 'randomAttack');
+  beforeEach(() => {
+    adventure.randomAttack();
+    console.log(adventure.specialists);
+  });
 
   test('depois da primeira aventura', () => {
     expect(adventure.specialists.length).toBe(5);
