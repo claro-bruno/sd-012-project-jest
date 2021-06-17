@@ -21,6 +21,6 @@ describe('o retorno do telefonema', () => {
   test('ocupado', () => {
     // assert.fail();
     expect.assertions(1);
-    expect(answerPhone(false)).rejects.toBe('reject');
+    expect(answerPhone(false)).rejects.toThrow('reject');
   });
 });
