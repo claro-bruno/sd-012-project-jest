@@ -22,6 +22,10 @@ beforeEach(() => {
   adventure.randomAttack();
 });
 
+afterAll(() => {
+  console.log(`${adventure.specialists[0].nome} has survived.`);
+});
+
 describe('quem sobreviveu?', () => {
   // Adicione seu código aqui
 
