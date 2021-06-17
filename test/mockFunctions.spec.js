@@ -22,8 +22,8 @@ describe('verifica as funções e os mocks', () => {
   mockFunctions.power = jest.fn().mockImplementation((a, b) => a ** b);
   mockFunctions.factorial = jest.fn().mockImplementation((a) => {
     let fact = 1;
-    for (let i = a; i > 0; i -= 1) {
-      fact *= i;
+    for (let index = a; index >= 1; index -= 1) {
+      fact *= index;
     }
     return fact;
   });
