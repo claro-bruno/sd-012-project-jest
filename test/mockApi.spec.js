@@ -33,7 +33,7 @@ describe('verifica o usuário', () => {
         login: { username: 'tunicao123', password: '1234567890' },
       }));
 
-  it('verifica se o usuário é o tunico', () => (
+  it('verifica se o usuário é o tunico', async () => (
     api.fetchURL().then((user) => {
       expect(user.gender).toEqual('male');
       expect(user.name.first).toEqual('Antônio');
