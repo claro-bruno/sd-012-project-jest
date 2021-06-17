@@ -13,6 +13,7 @@ O foco aqui é a utilização de mock functions.
 
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
+/* apagar */
 
 describe('verifica as funções e os mocks', () => {
   // Crie suas mock functions aqui

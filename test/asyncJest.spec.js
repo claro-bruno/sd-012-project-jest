@@ -9,6 +9,7 @@ a função recebe como parâmetro true e false, respectivamente.
 
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
+/* apagar */
 
 describe('o retorno do telefonema', () => {
   test('atende', () => {

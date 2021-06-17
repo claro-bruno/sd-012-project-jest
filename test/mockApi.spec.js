@@ -21,7 +21,7 @@ Dica: Utilizem os métodos jest.fn() ou jest.spyOn().
 
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
-
+/* apagar */
 describe('verifica o usuário', () => {
   // Crie sua mock da função fetchURL() aqui
 
