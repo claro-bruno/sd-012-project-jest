@@ -22,9 +22,8 @@ describe('verifica as funções e os mocks', () => {
   mockFunctions.divide = jest.fn().mockImplementation((a, b) => a / b);
   mockFunctions.power = jest.fn().mockImplementation((a, b) => a ** b);
   mockFunctions.factorial = jest.fn().mockImplementation((number) => {
-    let factorial = number;
-    for (let index = number; index > 1; index -= 1) factorial *= (index - 1);
-    return factorial;
+    for (let index = number; index > 1; index -= 1) number *= (index - 1);
+    return number;
   });
 
   test('testa função add', () => {
