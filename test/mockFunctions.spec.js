@@ -15,7 +15,20 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('verifica as funções e os mocks', () => {
-  // Crie suas mock functions aqui
+  mockFunctions.add = jest.fn((num1, num2) => num1 + num2);
+  mockFunctions.subtract = jest.fn((num1, num2) => num1 - num2);
+  mockFunctions.multiply = jest.fn((num1, num2) => num1 * num2);
+  mockFunctions.divide = jest.fn((num1, num2) => num1 / num2);
+  mockFunctions.power = jest.fn((num1, num2) => num1 ** num2);
+  mockFunctions.factorial = jest.fn((num1) => {
+    // Trecho de código retirado de :
+    // https://stackoverflow.com/questions/3959211/what-is-the-fastest-factorial-function-in-javascript
+    let factorial = 1;
+    for (let index = 2; index <= num1; index += 1) {
+      factorial *= index;
+    }
+    return factorial;
+  });
 
   test('testa função add', () => {
     expect(mockFunctions.add(1, 2)).toEqual(3);
