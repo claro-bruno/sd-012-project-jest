@@ -14,9 +14,9 @@ npm test asyncJest.spec.js
 
 describe('o retorno do telefonema', () => {
   test('atende', async () => {
-    expect(answerPhone(true)).resolves.toBe('Oi!');
+    await expect(answerPhone(true)).resolves.toBe('Oi!');
   });
   test('ocupado', async () => {
-    expect(answerPhone(false)).rejects.toBe('Infelizmente não podemos atender...');
+    await expect(answerPhone(false)).rejects.toBe('Infelizmente não podemos atender...');
   });
 });
