@@ -15,13 +15,16 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 
 describe('o retorno do telefonema', () => {
   test('atende', async () => {
-     await expect(answerPhone(true)).resolves.toBe('Oi!');
+    await expect(answerPhone(true)).resolves.toBe('Oi!');
     // Insira seu teste assíncrono aqui
     console.log(answerPhone(true));
   });
-  test('ocupado',  async () => {
-      await expect(answerPhone(false)).rejects.toThrowError(Error('Infelizmente não podemos atender...'));
+  test('ocupado', async () => {
+    await expect(answerPhone(false))
+      .rejects.toThrowError(Error('Infelizmente não podemos atender...'));
     // Insira seu teste assíncrono aqui
     console.log(answerPhone(false));
   });
 });
+
+// https://jestjs.io/pt-BR/docs/expect#tothrowerror<3
