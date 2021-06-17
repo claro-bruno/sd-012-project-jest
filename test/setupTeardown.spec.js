@@ -1,4 +1,5 @@
 const adventure = require('../src/setupTeardown');
+
 /*
 Num universo não tão distante, um grupo de aventureiros da Trybe enfrentam uma série de testes.
 O grupo parte em direção ao sucesso, mas,
@@ -18,9 +19,21 @@ PS: Os codinomes dos aventureiros são reais! Tentem descobrir quem é quem!
 
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
+const restAdventurers = () => {
+  const adventures = adventure.specialists;
+  const newArr = adventures.map((specialist) => `${specialist.nome} o ${specialist.classe};`);
+  let msg = 'Nossos Sobreviventes são:';
+  newArr.forEach((adventurer) => {
+    msg += `
+    ${adventurer}`;
+  });
+  if (newArr.length !== 1) return console.log(msg);
+  return console.log(`${newArr[0]} é o nosso único sobrevivente!`);
+};
 
 describe('quem sobreviveu?', () => {
-  // Adicione seu código aqui
+  beforeEach(() => adventure.randomAttack());
+  afterEach(() => restAdventurers());
 
   test('depois da primeira aventura', () => {
     expect(adventure.specialists.length).toBe(5);
