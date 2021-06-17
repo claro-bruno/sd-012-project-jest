@@ -6,5 +6,6 @@ const answerPhone = (answer) =>
     );
   });
 
-  // teste
 module.exports = answerPhone;
+
+console.log(answerPhone('alo').then((valor) => valor))
