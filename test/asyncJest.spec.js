@@ -13,7 +13,7 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 describe('o retorno do telefonema', () => {
   test('atende', () => {
     answerPhone('true').then((answer) => {
-      expect(answer(true)).toBe('Oi');
+      expect(answer(true)).toBe('Oi!');
     });
   });
   test('ocupado', () => {
