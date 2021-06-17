@@ -31,7 +31,7 @@ describe('verifica o usuário', () => {
       last: 'Britto',
     },
     location: {
-      country: 'Brazil',
+      country: 'Brazil', // não acredito que escrevi 'country' errado e fiquei preso tentando entender pq nao rodava '-';
     },
     email: 'tunico@bol.com.br',
     login: {
