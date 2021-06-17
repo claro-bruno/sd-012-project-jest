@@ -1,5 +1,4 @@
 // ATENÇÃO!!! Não edite este arquivo. Altere apenas os arquivos da pasta 'test'.
-//inicia projeto
 const answerPhone = (answer) =>
   new Promise(function (resolve, reject) {
     setTimeout(
