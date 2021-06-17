@@ -37,7 +37,6 @@ const fakeUser = {
 };
 
 describe('verifica o usuário', () => {
-
   api.fetchURL.mockImplementation(async () => fakeUser);
 
   test('verifica se o usuário é o tunico', async () => (
