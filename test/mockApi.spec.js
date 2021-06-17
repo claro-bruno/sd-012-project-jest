@@ -23,7 +23,7 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('verifica o usuário', () => {
-  api.fetchURL = jest.fn(async () => ({
+  const tunicoData = {
     gender: 'male',
     name: { first: 'Antônio', last: 'Britto' },
     location: {
@@ -34,7 +34,9 @@ describe('verifica o usuário', () => {
       username: 'tunicao123',
       password: '1234567890',
     },
-  }));
+  };
+
+  api.fetchURL = jest.fn().mockImplementation(async () => tunicoData);
 
   test('verifica se o usuário é o tunico', async () => (
     api.fetchURL().then((user) => {
