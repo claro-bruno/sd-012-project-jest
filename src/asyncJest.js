@@ -6,4 +6,5 @@ const answerPhone = (answer) =>
     );
   });
 
+  // teste
 module.exports = answerPhone;
