@@ -11,11 +11,11 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 
 describe('o retorno do telefonema', () => {
   test('atende', () => {
-    expect(answerPhone(true)).resolves.toEqual('Oi!')
+    expect(answerPhone(true)).resolves.toEqual('Oi!');
   });
   test('ocupado', () => {
     answerPhone(false).catch((response) => {
       expect(response).toEqual(Error('Infelizmente não podemos atender...'));
-    })
+    });
   });
 });
