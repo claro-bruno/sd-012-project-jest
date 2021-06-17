@@ -31,6 +31,12 @@ describe('quem sobreviveu?', () => {
     console.log(`Restam os seguintes aventureiros: ${map.join(', ')}`);
   });
 
+  afterAll(() => {
+    const specialistsPeople = adventure.specialists;
+    const map = specialistsPeople.map((specialist) => specialist.nome);
+    console.log(`O ${map} foi o único aventureiro que sobreviveu!`);
+  });
+
   test('depois da primeira aventura', () => {
     expect(adventure.specialists.length).toBe(5);
   });
