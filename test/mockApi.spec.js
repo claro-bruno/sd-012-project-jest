@@ -14,7 +14,7 @@ independa de chamadas de API e retorne as seguintes informações do Tunico:
 - Nome de usuário: tunicao123
 - Senha: 1234567890 (Usem senhas fortes, crianças!)
 
-Note que as informações devem estar de acordo com o JSON
+Note que as informações devem estar d acordo com o JSON
 presente no README.md do projeto.
 
 Dica: Utilizem os métodos jest.fn() ou jest.spyOn().
