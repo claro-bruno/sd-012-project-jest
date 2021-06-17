@@ -36,7 +36,7 @@ describe('verifica o usuário', () => {
     },
   };
 
-  api.fetchURL = jest.fn().mockImplementation(async () => tunicoData);
+  api.fetchURL = jest.fn(async () => tunicoData);
 
   test('verifica se o usuário é o tunico', async () => (
     api.fetchURL().then((user) => {
