@@ -23,15 +23,14 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 // jest.mock('../src/mockApi');
 describe('verifica o usuário', () => {
- 
   test('verifica se o usuário é o Tunico', () => {
-    api.fetchURL = jest.fn().mockImplementation( async () => ({
+    api.fetchURL = jest.fn().mockImplementation(async () => ({
       gender: 'male',
-      name: {first: 'Antônio', last: 'Britto'},
-      location: {country: 'Brazil'},
-      email:'tunico@bol.com.br',
-      login:{username: 'tunicao123', password: '1234567890'}
-    }))
+      name: { first: 'Antônio', last: 'Britto' },
+      location: { country: 'Brazil' },
+      email: 'tunico@bol.com.br',
+      login: { username: 'tunicao123', password: '1234567890' },
+    }));
     api.fetchURL().then((user) => {
       expect(user.gender).toEqual('male');
       expect(user.name.first).toEqual('Antônio');
@@ -40,6 +39,6 @@ describe('verifica o usuário', () => {
       expect(user.email).toEqual('tunico@bol.com.br');
       expect(user.login.username).toEqual('tunicao123');
       expect(user.login.password).toEqual('1234567890');
-    })
+    });
   });
 });
