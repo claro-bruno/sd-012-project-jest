@@ -18,6 +18,6 @@ describe('o retorno do telefonema', () => {
   });
   test('ocupado', async () => {
     const erro = new Error('Infelizmente não podemos atender...');
-    await expect(answerPhone(false)).resolves.toBe(erro);
+    await expect(answerPhone(false)).rejects.toEqual(erro);
   });
 });
