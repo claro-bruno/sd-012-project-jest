@@ -11,12 +11,13 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 
 describe('o retorno do telefonema', () => {
   test('atende', async () => {
-    const call = await answerPhone('hello');
+    const call = await answerPhone(true);
+    // Refatorado utilizando true e false de acordo com o projeto da colega Adriana Biberg.
     expect(call).toBe('Oi!');
   });
   test('ocupado', async () => {
     try {
-      await answerPhone();
+      await answerPhone(false);
     } catch (error) {
       expect(error).toEqual(new Error('Infelizmente não podemos atender...'));
     }
