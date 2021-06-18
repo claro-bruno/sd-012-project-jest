@@ -11,10 +11,9 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('o retorno do telefonema', () => {
-  test('atende', () => {
-    answerPhone('alo').then((valor) => expect(valor).toBe('Oi'));
-  });
-  test('ocupado', () => {
-    answerPhone().catch((valor) => expect(valor).toBe('Infelizmente não podemos atender...'));
-  });
+  expect.assertions(1);
+  test('atende', () => answerPhone('oi').then((valor) => expect(valor).toBe('Oi!')));
+  expect.assertions(1);
+  test('ocupado', () => answerPhone().catch((valor) => expect(valor.message)
+    .toBe('Infelizmente não podemos atender...')));
 });
