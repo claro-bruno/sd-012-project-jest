@@ -1,5 +1,6 @@
 // const assert = require('assert');
 const answerPhone = require('../src/asyncJest');
+
 const ERROR_MESSAGE = 'Infelizmente não podemos atender...';
 /*
 A função answerPhone recebe um parâmetro boleano.
