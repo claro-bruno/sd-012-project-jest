@@ -24,4 +24,5 @@ const randomAttack = () => {
   specialists.splice(randomSpecialistIndex, 1);
 };
 
+
 module.exports = { specialists, randomAttack };
