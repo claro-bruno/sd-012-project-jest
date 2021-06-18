@@ -25,5 +25,4 @@ describe('o retorno do telefonema', () => {
       expect(error).toEqual(erro);
     }
   });
-  // Alguém passa a reposta aqui!! Pago 5 reais no PIX//
 });
