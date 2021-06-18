@@ -15,6 +15,8 @@ describe('o retorno do telefonema', () => {
     expect(answerPhone(true)).resolves.toEqual('Oi!'); // Resolvido com a ajuda da Gisele na mentoria
   });
   test('ocupado', () => {
-    expect(answerPhone(false)).rejects.toEqual(new Error('Infelizmente não podemos atender...'));
+    expect.assertions(1);
+    return expect(answerPhone(false)).rejects
+      .toEqual(new Error('Infelizmente não podemos atender...'));
   });
-});
+}); // Ao rever a aula ao vivo e fazer alguns testes, percebi que meu código estava dando um falso positivo. Com isso, adicionei o expect.assertions e o return e o problema foi resolvido!
