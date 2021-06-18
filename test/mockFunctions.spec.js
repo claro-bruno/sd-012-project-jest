@@ -1,23 +1,8 @@
 const mockFunctions = require('../src/mockFunctions');
 
 jest.mock('../src/mockFunctions');
-/*
-Criamos uma série de funções com eficiência duvidosa.
-Elas estão no arquivo 'src/mockFunctions.js'.
-Crie mock functions para cada uma das operações de modo que os cálculos sejam feitos corretamente,
-não como estão sendo feitos no arquivo original.
-A idéia é que os novos testes sobrescrevam os testes
-importados apenas na suite de testes abaixo.
-
-Importante! A correção de código via mock functions não é uma aplicação usual.
-O foco aqui é a utilização de mock functions.
-
-ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
-*/
 
 describe('verifica as funções e os mocks', () => {
-  // Crie suas mock functions aqui
-
   test('testa função add', () => {
     mockFunctions.add.mockImplementation((a, b) => a + b);
     expect(mockFunctions.add(1, 2)).toEqual(3);
