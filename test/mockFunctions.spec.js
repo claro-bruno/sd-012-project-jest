@@ -17,20 +17,11 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('verifica as funções e os mocks', () => {
-  // Crie suas mock functions aqui
   mockFunctions.add.mockImplementation(((a, b) => a + b));
   mockFunctions.subtract.mockImplementation(((a, b) => a - b));
   mockFunctions.multiply.mockImplementation(((a, b) => a * b));
   mockFunctions.divide.mockImplementation(((a, b) => a / b));
-
-  mockFunctions.power.mockImplementation((a, b) => {
-    let pow = a;
-    if (!a || !b) return 1;
-    for (let i = 1; i < b; i += 1) {
-      pow = mockFunctions.multiply(pow, a);
-    }
-    return pow;
-  });
+  mockFunctions.power.mockImplementation(((a, b) => a ** b));
 
   mockFunctions.factorial.mockImplementation((a) => {
     let fact = a;
