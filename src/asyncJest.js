@@ -8,4 +8,4 @@ const answerPhone = (answer) =>
 
 module.exports = answerPhone;
 
-console.log(answerPhone('alo').then((valor) => valor))
+answerPhone('alo').then((valor) => valor)
