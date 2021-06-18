@@ -7,5 +7,3 @@ const answerPhone = (answer) =>
   });
 
 module.exports = answerPhone;
-
-console.log(new Error('teste').message)
