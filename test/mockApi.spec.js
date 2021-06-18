@@ -10,7 +10,7 @@ const mockUser = async () => ({ // precisa ser assíncrona (uma promise) para se
 });
 
 describe('verifica o usuário', () => {
-  api.fetchURL = jest.fn().mockImplementation(mockUser); // simulamos uma requisição implementando a funçao mockUser para fetchURL.
+  api.fetchURL = jest.fn().mockImplementation(mockUser); // implementando a funçao mockUser para fetchURL, pois simularemos uma requisição api no teste.
 
   test('verifica se o usuário é o tunico', async () => (
     api.fetchURL().then((user) => {
