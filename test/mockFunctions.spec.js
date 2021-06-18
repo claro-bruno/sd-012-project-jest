@@ -14,8 +14,27 @@ O foco aqui é a utilização de mock functions.
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
+jest.mock('../src/mockFunctions');
+
+//  Referencias
+/*  O método mockImplementation é útil quando você precisa definir a implementação padrão de uma função mock que é criada a partir de outro módulo (https://jestjs.io/pt-BR/docs/mock-functions)  */
+
+/*  A função Math.pow() retorna a base elevada ao expoente power, ou seja, baseexpoente (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/pow), no entanto, o linter acusou erro e deu a solução (31:52  error  'Math.pow' is restricted from being used. Use the exponentiation operator (**) instead  no-restricted-properties)  */
+
+/*  A recursividade utilizada no mock da função factorial foi retirada do comentario de brunomatb, na postagem do git de macsousa da jscalculafatorial.html (https://gist.github.com/macsousa/dccd2abb2c68c5958846824e975482d3) */
+
 describe('verifica as funções e os mocks', () => {
-  // Crie suas mock functions aqui
+  mockFunctions.add.mockImplementation((a, b) => a + b);
+  mockFunctions.subtract.mockImplementation((a, b) => a - b);
+  mockFunctions.multiply.mockImplementation((a, b) => a * b);
+  mockFunctions.divide.mockImplementation((a, b) => a / b);
+  mockFunctions.power.mockImplementation((a, b) => (a ** b));
+  mockFunctions.factorial.mockImplementation((a) => {
+    if (a === 1) {
+      return 1;
+    }
+    return a * mockFunctions.factorial(a - 1);
+  });
 
   test('testa função add', () => {
     expect(mockFunctions.add(1, 2)).toEqual(3);
