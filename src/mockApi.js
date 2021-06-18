@@ -12,7 +12,6 @@ const fetchURL = () => new Promise(function (resolve, reject) {
     });
     res.on('error', reject);
     res.on('close', () => resolve(JSON.parse(userInfo).results[0]));
-    console.log(userInfo);
   });
 });
 
