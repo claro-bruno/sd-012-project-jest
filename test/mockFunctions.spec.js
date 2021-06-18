@@ -13,7 +13,7 @@ O foco aqui é a utilização de mock functions.
 
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
-jest.mock('../src/mockFunctions')
+jest.mock('../src/mockFunctions');
 describe('verifica as funções e os mocks', () => {
   mockFunctions.add.mockImplementation((a, b) => a + b);
   mockFunctions.subtract.mockImplementation((a, b) => a - b);
