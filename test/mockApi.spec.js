@@ -21,6 +21,7 @@ Dica: Utilizem os métodos jest.fn() ou jest.spyOn().
 
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
+// mockei o retorno da função fetchURL, setando um valor pra ela(mockReturnValue) de acordo com a new promise resolvida que criei(contendo as informações de acordo com o teste).
 
 describe('verifica o usuário', () => {
   api.fetchURL = jest.fn().mockReturnValue(new Promise((resolve) => {
