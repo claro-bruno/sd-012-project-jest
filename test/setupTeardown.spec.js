@@ -21,7 +21,7 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 const restAdventurers = () => {
   const adventures = adventure.specialists;
-  const newArr = adventures.map((specialist) => `${specialist.nome} o ${specialist.classe};`);
+  const newArr = adventures.map((specialist) => `${specialist.nome} o ${specialist.classe}`);
   let msg = 'Nossos Sobreviventes são:';
   newArr.forEach((adventurer) => {
     msg += `
