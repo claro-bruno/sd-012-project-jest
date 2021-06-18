@@ -12,11 +12,13 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 
 describe('o retorno do telefonema', () => {
   test('atende', () => {
-    expect(answerPhone(true)).resolves.toEqual('Oi!'); // Resolvido com a ajuda da Gisele na mentoria
+    expect.assertions(1);
+    return expect(answerPhone(true)).resolves.toEqual('Oi!'); // Resolvido com a ajuda da Gisele na mentoria
   });
   test('ocupado', () => {
     expect.assertions(1);
     return expect(answerPhone(false)).rejects
       .toEqual(new Error('Infelizmente não podemos atender...'));
   });
-}); // Ao rever a aula ao vivo e fazer alguns testes, percebi que meu código estava dando um falso positivo. Com isso, adicionei o expect.assertions e o return e o problema foi resolvido!
+});
+// Ao rever a aula ao vivo e fazer alguns testes, percebi que meu código estava dando um falso positivo. Com isso, adicionei o expect.assertions e o return e o problema foi resolvido!
