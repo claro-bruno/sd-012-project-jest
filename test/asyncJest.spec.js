@@ -18,13 +18,12 @@ describe('o retorno do telefonema', () => {
     await expect(answerPhone(true)).resolves.toBe('Oi!');
     // Insira seu teste assíncrono aqui
   });
-  test('ocupado', () => {
+  test('ocupado', async () => {
     expect.assertions(1);
-    return answerPhone(false)
-      .catch((out) => expect(out).toEqual(new Error('Infelizmente não podemos atender...')));
-    // expect.assertions(1);
-    // await expect(answerPhone(false))
-    //   .rejects.toThrowError(Error('Infelizmente não podemos atender...'));
+    // return answerPhone(false)
+    //  .catch((output) => expect(output).toEqual(new Error('Infelizmente não podemos atender...')));
+    await expect(answerPhone(false))
+      .rejects.toThrowError(Error('Infelizmente não podemos atender...'));
     // Insira seu teste assíncrono aqui
   });
 });
