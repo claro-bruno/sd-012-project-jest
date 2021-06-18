@@ -35,10 +35,10 @@ describe('verifica o usuário', () => {
       username: 'tunicao123',
       password: '1234567890',
     },
-  }
+  };
   api.fetchURL = jest.fn().mockImplementation(user);
 
-  test('verifica se o usuário é o tunico', async () => (
+  test('verifica se o usuário é o tunico', async () => {
     api.fetchURL = () => {
       expect(user.gender).toEqual('male');
       expect(user.name.first).toEqual('Antônio');
@@ -47,6 +47,6 @@ describe('verifica o usuário', () => {
       expect(user.email).toEqual('tunico@bol.com.br');
       expect(user.login.username).toEqual('tunicao123');
       expect(user.login.password).toEqual('1234567890');
-    })
-  );
-})
+    };
+  });
+});
