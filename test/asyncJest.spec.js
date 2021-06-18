@@ -13,12 +13,11 @@ describe('o retorno do telefonema', () => {
   test('atende', () => {
     expect.assertions(1);
     return answerPhone(true).then((result) => expect(result).toBe('Oi!'));
-    
   });
   test('ocupado', () => {
     expect.assertions(1);
     return answerPhone(false).catch((error) => {
       expect(error.message).toBe('Infelizmente não podemos atender...');
-    });  
+    });
   });
 });
