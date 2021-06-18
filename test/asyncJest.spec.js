@@ -12,7 +12,7 @@ describe('o retorno do telefonema', () => {
   test('atende', async () => {
     expect.assertions(1);
     const result = await answerPhone(true);
-    await expect(result).toEqual('Oi!');
+    expect(result).toEqual('Oi!');
   });
   test('ocupado', async () => {
     await expect(answerPhone(false)).rejects.toEqual(Error('Infelizmente não podemos atender...'));
