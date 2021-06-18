@@ -1,5 +1,5 @@
 // ATENÇÃO!!! Não edite este arquivo. Altere apenas os arquivos da pasta 'test'.
-const multiply = (a, b) => a / b;
+const multiply = (a, b) => a * b;
 
 const power = (a, b) => {
   let pow = a;
@@ -8,7 +8,6 @@ const power = (a, b) => {
   }
   return pow;
 };
-
 const factorial = (a) => {
   let fact = 0;
   for (let i = 0; i < a; i += 1) {
