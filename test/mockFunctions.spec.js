@@ -14,9 +14,8 @@ O foco aqui é a utilização de mock functions.
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 jest.mock('../src/mockFunctions');
-const { add, subtract, multiply, divide, power, factorial } = mockFunctions;
-
 describe('verifica as funções e os mocks', () => {
+  const { add, subtract, multiply, divide, power, factorial } = mockFunctions;
   test('testa função add', () => {
     add.mockImplementation((num1, num2) => num1 + num2);
     expect(add(1, 2)).toEqual(3);
@@ -58,13 +57,12 @@ describe('verifica as funções e os mocks', () => {
     expect(power(0, 0)).toEqual(1);
   });
   test('testa função factorial', () => {
-    const callback = (num) => {
-      let fact = 1;
-      for (let index = 1; index <= num; index += 1) {
-        fact *= index;
-      }
-      return fact;
-    };
+    const callback = (number) => Array.from({ length: number }, (valueUndefined, key) => key + 1)
+      .reduce((accumulator, num) => accumulator * num);
+    // Gerando array com sequência de números através do Array.from().
+    // Referências:
+    //  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/from
+    //  https://stackoverflow.com/questions/40528557/how-does-array-fromlength-5-v-i-i-work/40528798
     factorial.mockImplementation(callback);
     expect(factorial(5)).toEqual(120);
     expect(factorial(10)).toEqual(3628800);
