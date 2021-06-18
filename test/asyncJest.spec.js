@@ -10,22 +10,16 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('o retorno do telefonema', () => {
-  test('atende', () => {
+  test('atende', async () => {
     expect.assertions(1);
     // assert.fail();
     // Insira seu teste assíncrono aqui
-    return answerPhone(true)
-      .then((data) => {
-        expect(data).toBe('Oi!');
-      });
+    await expect(answerPhone(true)).resolves.toBe('Oi!');
   });
-  test('ocupado', () => {
+  test('ocupado', async () => {
     expect.assertions(1);
     // assert.fail();
     // Insira seu teste assíncrono aqui
-    return answerPhone(false)
-      .catch((error) => {
-        expect(error).toEqual(new Error('Infelizmente não podemos atender...'));
-      });
+    await expect(answerPhone(false)).rejects.toEqual(new Error('Infelizmente não podemos atender...'));
   });
 });
