@@ -1,7 +1,7 @@
 const mockFunctions = require('../src/mockFunctions');
 
 jest.mock('../src/mockFunctions');
-const factorialFunc = (a) => !a || a * mockFunctions.factorial(a - 1)
+const factorialFunc = (a) => !a || a * mockFunctions.factorial(a - 1);
 /*
 Criamos uma série de funções com eficiência duvidosa.
 Elas estão no arquivo 'src/mockFunctions.js'.
