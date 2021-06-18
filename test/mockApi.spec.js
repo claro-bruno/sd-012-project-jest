@@ -25,7 +25,6 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 // Feita com ajuda no plantao da Leticia
 
 describe('verifica o usuário', () => {
-  // Crie sua mock da função fetchURL() aqui
   const usuario = {
     gender: 'male',
     name: { first: 'Antônio', last: 'Britto' },
