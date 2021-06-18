@@ -32,6 +32,7 @@ const requestReturnFake = {
 
 describe('verifica o usuário', () => {
   api.fetchURL = jest.fn().mockResolvedValue(requestReturnFake);
+  // api.fetchURL = jest.fn(async () => requestReturnFake);
 
   test('verifica se o usuário é o tunico', () => (
     api.fetchURL().then((user) => {
