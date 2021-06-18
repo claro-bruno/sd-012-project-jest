@@ -61,6 +61,8 @@ describe('verifica as funções e os mocks', () => {
     expect(mockFunctions.power(1, 10)).toEqual(1);
     expect(mockFunctions.power(0, 0)).toEqual(1);
   });
+
+  // Referência: https://www.javascriptprogressivo.net/2018/12/Calculo-Fatorial-WHILE-FOR-Lacos-JS.html
   test('testa função factorial', () => {
     mockFunctions.factorial.mockImplementation((a) => {
       let resultado = 1;
