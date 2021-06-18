@@ -1,4 +1,4 @@
-const mockFunctions = require('../src/mockFunctions');
+// const mockFunctions = require('../src/mockFunctions');
 
 /*
 Criamos uma série de funções com eficiência duvidosa.
@@ -14,7 +14,7 @@ O foco aqui é a utilização de mock functions.
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
-describe('verifica as funções e os mocks', () => {
+/* describe('verifica as funções e os mocks', () => {
   // Crie suas mock functions aqui
 
   test('testa função add', () => {
@@ -59,4 +59,4 @@ describe('verifica as funções e os mocks', () => {
     expect(mockFunctions.factorial(8)).toEqual(40320);
     expect(mockFunctions.factorial(2)).toEqual(2);
   });
-});
+}); */
