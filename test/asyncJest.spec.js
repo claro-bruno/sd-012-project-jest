@@ -10,13 +10,25 @@ a função recebe como parâmetro true e false, respectivamente.
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 // Iniciando projeto!
+// describe('o retorno do telefonema', () => {
+//   test('atende', async () => {
+//     await expect(Promise.resolve(answerPhone(true))
+//       .then('Oi!'));
+//   });
+//   test('ocupado', async () => {
+//     await expect(Promise.reject(answerPhone(false))
+//       .then(new Error('Infelizmente não podemos atender...')));
+//   });
+// });
 describe('o retorno do telefonema', () => {
-  test('atende', async () => {
-    await expect(Promise.resolve(answerPhone(true))
-      .then('Oi!'));
+  test('atende', () => {
+    expect.assertions(1);
+    return answerPhone(true).then((data) => expect(data).toEqual('Oi!'));
   });
-  test('ocupado', async () => {
-    await expect(Promise.reject(answerPhone(false))
-      .then(new Error('Infelizmente não podemos atender...')));
+  test('ocupado', () => {
+    expect.assertions(1);
+    return answerPhone(false).catch((error) => {
+      expect(error).toEqual(new Error('Infelizmente não podemos atender...'));
+    });
   });
 });
