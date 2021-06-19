@@ -13,9 +13,19 @@ O foco aqui é a utilização de mock functions.
 
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
+jest.mock('../src/mockFunctions')
 
 describe('verifica as funções e os mocks', () => {
-  // Crie suas mock functions aqui
+  mockFunctions.add.mockImplementation((a, b) => a + b)
+  mockFunctions.subtract.mockImplementation((a, b) => a - b)
+  mockFunctions.multiply.mockImplementation((a, b) => a * b)
+  mockFunctions.divide.mockImplementation((a, b) => a / b)
+  mockFunctions.power.mockImplementation((a, b) => a ** b)
+  mockFunctions.factorial.mockImplementation((a) => {
+    let fact = 1;
+    for (let i = 2; i <= a; i += 1) fact *= i;
+    return fact;
+  })
 
   test('testa função add', () => {
     expect(mockFunctions.add(1, 2)).toEqual(3);
@@ -52,6 +62,7 @@ describe('verifica as funções e os mocks', () => {
     expect(mockFunctions.power(1, 10)).toEqual(1);
     expect(mockFunctions.power(0, 0)).toEqual(1);
   });
+  // A implementação do teste dessa única função, tive que entender a lógica através do site https://serprogramador.com.br/artigos/topico/javascript/Como-calcular-a-operacao-matematica-de-fatorial-com-JavaScript#:~:text=O%20fatorial%20de%20um%20n%C3%BAmero,o%20multiplicador%20seja%20equivalente%201.
   test('testa função factorial', () => {
     expect(mockFunctions.factorial(5)).toEqual(120);
     expect(mockFunctions.factorial(10)).toEqual(3628800);

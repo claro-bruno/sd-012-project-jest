@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Jest project",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watchAll",
     "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json ."
   },
   "repository": {
@@ -24,7 +24,7 @@
   "devDependencies": {
     "acorn": "5.7.4",
     "eslint-config-trybe-fundamentals": "1.1.0",
-    "jest": "24.9.0",
+    "jest": "^24.9.0",
     "minimist": "1.2.2"
   }
 }
