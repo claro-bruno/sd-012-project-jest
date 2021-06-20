@@ -23,8 +23,6 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('verifica o usuário', () => {
-  
-
   const tunicao = {
     gender: 'male',
     name: { first: 'Antônio', last: 'Britto' },
