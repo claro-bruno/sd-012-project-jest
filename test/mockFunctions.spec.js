@@ -28,7 +28,7 @@ describe('verifica as funções e os mocks', () => {
   mockFunctions.divide = jest.fn().mockImplementation((a, b) => a / b);
   mockFunctions.power = jest.fn().mockImplementation((a, b) => a ** b);
   mockFunctions.factorial = jest.fn().mockImplementation((a) => fatorial(a));
-  // fatorial resolvido com ajuda da mentoria da Letícia e colegas Bruno**., Seŕgio;
+  // fatorial resolvido com ajuda da Letícia e colegas Bruno**., Seŕgio na mentoria;
 
   test('testa função add', () => {
     expect(mockFunctions.add(1, 2)).toEqual(3);
