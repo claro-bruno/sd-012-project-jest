@@ -32,7 +32,7 @@ describe('verifica o usuário', () => {
     email: 'tunico@bol.com.br',
     login: {
       username: 'tunicao123',
-      password: '1234567890'
+      password: '1234567890',
     },
   };
   api.fetchURL = jest.fn().mockResolvedValue(info);
