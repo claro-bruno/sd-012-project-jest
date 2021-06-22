@@ -1,4 +1,3 @@
-const assert = require('assert');
 const answerPhone = require('../src/asyncJest');
 // const answerPhone = require('../src/asyncJest');
 /*
@@ -14,7 +13,7 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 describe('o retorno do telefonema', () => {
   test('atende', () => {
     expect.assertions(1);
-    return expect(answerPhone(true)).resolves.toEqual('Oi!');   
+    return expect(answerPhone(true)).resolves.toEqual('Oi!');
   });
   test('ocupado', () => {
     expect.assertions(1);
