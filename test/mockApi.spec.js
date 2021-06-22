@@ -25,7 +25,7 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 describe('verifica o usuário', () => {
   const info = {
     gender: 'male',
-    name: { fist: 'Antônio', last: 'Britto' },
+    name: { first: 'Antônio', last: 'Britto' },
     location: {
       country: 'Brazil',
     },
