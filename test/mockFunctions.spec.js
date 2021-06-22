@@ -12,8 +12,8 @@ Importante! A correção de código via mock functions não é uma aplicação u
 O foco aqui é a utilização de mock functions.
 
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
-*/ 
-jest.mock('../src/mockFunctions')
+*/
+jest.mock('../src/mockFunctions');
 
 describe('verifica as funções e os mocks', () => {
   // mockFunctions = jest.fn();
@@ -24,9 +24,9 @@ describe('verifica as funções e os mocks', () => {
   mockFunctions.power.mockImplementation((a, b) => a ** b);
   mockFunctions.factorial.mockImplementation((a) => {
     let fatorial = 1;
-      for (let index = 2; index <= a; index += 1) fatorial *= index;
-      return fatorial;
-  }); 
+    for (let index = 2; index <= a; index += 1) fatorial *= index;
+    return fatorial;
+  });
 
   test('testa função add', () => {
     expect(mockFunctions.add(1, 2)).toEqual(3);
