@@ -13,5 +13,5 @@ describe('o retorno do telefonema', () => {
   test('atende', async () => expect(answerPhone(true)).resolves.toBe('Oi!'));
 
   test('ocupado', async () => expect(answerPhone(false))
-  .rejects.toEqual(new Error('Infelizmente não podemos atender...')))
+    .rejects.toEqual(new Error('Infelizmente não podemos atender...')));
 });
