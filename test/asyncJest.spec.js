@@ -1,4 +1,4 @@
-const assert = require('assert');
+// const assert = require('assert');
 const answerPhone = require('../src/asyncJest');
 // iniciando
 // const answerPhone = require('../src/asyncJest');
