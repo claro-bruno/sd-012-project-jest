@@ -20,11 +20,11 @@ describe('o retorno do telefonema', () => {
     await expect(Promise.resolve(answerPhone(true))
       .then('Oi!'));
   });
-});
-// test('ocupado', () => {
-// assert.fail();
-// Insira seu teste assíncrono aqui
-test('ocupado', async () => {
-  await expect(Promise.reject(answerPhone(false))
-    .then(new Error('Infelizmente não podemos atender...')));
+  // test('ocupado', () => {
+  // assert.fail();
+  // Insira seu teste assíncrono aqui
+  test('ocupado', async () => {
+    await expect(Promise.reject(answerPhone(false))
+      .then(new Error('Infelizmente não podemos atender...')));
+  });
 });
