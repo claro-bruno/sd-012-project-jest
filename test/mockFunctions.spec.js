@@ -1,5 +1,7 @@
 const mockFunctions = require('../src/mockFunctions');
 
+jest.mock('../src/mockFunctions');
+
 /*
 Criamos uma série de funções com eficiência duvidosa.
 Elas estão no arquivo 'src/mockFunctions.js'.
@@ -14,28 +16,17 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 
 describe('verifica as funções e os mocks', () => {
   // Crie suas mock functions aqui
-  mockFunctions.add = jest.fn();
   mockFunctions.add.mockImplementation((a, b) => a + b);
-
-  mockFunctions.subtract = jest.fn();
   mockFunctions.subtract.mockImplementation((a, b) => a - b);
-
-  mockFunctions.multiply = jest.fn();
   mockFunctions.multiply.mockImplementation((a, b) => a * b);
-
-  mockFunctions.divide = jest.fn();
   mockFunctions.divide.mockImplementation((a, b) => a / b);
-
-  mockFunctions.power = jest.fn();
   mockFunctions.power.mockImplementation((a, b) => a ** b);
-
-  mockFunctions.factorial = jest.fn();
   mockFunctions.factorial.mockImplementation((a) => {
-    let resultado = 1;
-    for (let indice = 1; indice <= a; a += 1) {
-      resultado *= indice;
+    let result = 1;
+    for (let i = 1; i <= a; i += 1) {
+      result *= i;
     }
-    return resultado;
+    return result;
   });
 
   test('testa função add', () => {
@@ -44,7 +35,6 @@ describe('verifica as funções e os mocks', () => {
     expect(mockFunctions.add(-11, 25)).toEqual(14);
     expect(mockFunctions.add(13, -188)).toEqual(-175);
     expect(mockFunctions.add(7, 26)).toEqual(33);
-    expect(mockFunctions.add).toHaveBeenCalledTimes(5);
   });
   test('testa função subtract', () => {
     expect(mockFunctions.subtract(899, 35)).toEqual(864);
@@ -52,7 +42,6 @@ describe('verifica as funções e os mocks', () => {
     expect(mockFunctions.subtract(45, 97)).toEqual(-52);
     expect(mockFunctions.subtract(23, -108)).toEqual(131);
     expect(mockFunctions.subtract(-133, -29)).toEqual(-104);
-    expect(mockFunctions.subtract).toHaveBeenCalledTimes(5);
   });
   test('testa função multiply', () => {
     expect(mockFunctions.multiply(1, 2)).toEqual(2);
@@ -60,7 +49,6 @@ describe('verifica as funções e os mocks', () => {
     expect(mockFunctions.multiply(-4, 9)).toEqual(-36);
     expect(mockFunctions.multiply(-12, -7)).toEqual(84);
     expect(mockFunctions.multiply(19, 23)).toEqual(437);
-    expect(mockFunctions.multiply).toHaveBeenCalledTimes(5);
   });
   test('testa função divide', () => {
     expect(mockFunctions.divide(169, 13)).toEqual(13);
@@ -68,7 +56,6 @@ describe('verifica as funções e os mocks', () => {
     expect(mockFunctions.divide(42, 7)).toEqual(6);
     expect(mockFunctions.divide(729, 243)).toEqual(3);
     expect(mockFunctions.divide(1331, 11)).toEqual(121);
-    expect(mockFunctions.divide).toHaveBeenCalledTimes(5);
   });
   test('testa função power', () => {
     expect(mockFunctions.power(10, 2)).toEqual(100);
@@ -76,7 +63,6 @@ describe('verifica as funções e os mocks', () => {
     expect(mockFunctions.power(5, 5)).toEqual(3125);
     expect(mockFunctions.power(1, 10)).toEqual(1);
     expect(mockFunctions.power(0, 0)).toEqual(1);
-    expect(mockFunctions.power).toHaveBeenCalledTimes(5);
   });
   test('testa função factorial', () => {
     expect(mockFunctions.factorial(5)).toEqual(120);
@@ -84,6 +70,5 @@ describe('verifica as funções e os mocks', () => {
     expect(mockFunctions.factorial(3)).toEqual(6);
     expect(mockFunctions.factorial(8)).toEqual(40320);
     expect(mockFunctions.factorial(2)).toEqual(2);
-    expect(mockFunctions.factorial).toHaveBeenCalledTimes(5);
   });
 });
