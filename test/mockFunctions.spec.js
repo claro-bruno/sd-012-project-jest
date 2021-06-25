@@ -63,7 +63,7 @@ describe('verifica as funções e os mocks', () => {
     let rval = 1;
     for (let i = 2; i <= num; i += 1) {
       rval *= i;
-    };
+    }
     return rval;
   });
   test('testa função factorial', () => {
