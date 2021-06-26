@@ -35,15 +35,15 @@ const pessoa = {
     username: 'tunicao123',
     password: '1234567890',
   }
-}
+};
 
 describe('verifica o usuário', () => {
   // Crie sua mock da função fetchURL() aqui
   // Estou mokando o retorno da função resolvida.
   api.fetchURL = jest.fn()
-  .mockResolvedValue(pessoa)
+    .mockResolvedValue(pessoa);
 
-  // comparando os valores que o mock está retornando. 
+  // comparando os valores que o mock está retornando.
   test('verifica se o usuário é o tunico', async () => (
     api.fetchURL().then((user) => {
       expect(user.gender).toEqual('male');
