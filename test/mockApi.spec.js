@@ -34,7 +34,7 @@ const pessoa = {
   login: {
     username: 'tunicao123',
     password: '1234567890',
-  }
+  },
 };
 
 describe('verifica o usuário', () => {
