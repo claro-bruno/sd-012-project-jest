@@ -70,3 +70,16 @@ describe('verifica as funções e os mocks', () => {
     expect(mockFunctions.factorial(2)).toEqual(2);
   });
 });
+
+/*
+Referência de site
+https://www.w3schools.com/js/js_operators.asp
+https://jestjs.io/pt-BR/docs/mock-function-api#mockfnmockimplementationfn
+
+Referência de Git não vou por quais requisitos porque todos me ajudaram a entender
+Lucas Basques - https://github.com/tryber/sd-012-project-jest/pull/145
+
+Rodrigo Grande - https://github.com/tryber/sd-012-project-jest/pull/148
+
+Emerson Ovidio - https://github.com/tryber/sd-012-project-jest/pull/136
+*/
