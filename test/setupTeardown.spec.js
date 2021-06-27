@@ -19,8 +19,17 @@ PS: Os codinomes dos aventureiros são reais! Tentem descobrir quem é quem!
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
+// beforeEach(fn): Executa uma função antes que cada um dos testes neste arquivo seja executado. Se a função retorna uma promessa, Jest aguarda essa promessa resolver antes de executar o teste.
+
+// afterEach (fn): Executa uma função após concluir cada um dos testes neste arquivo. Se a função retorna uma promessa, Jest aguarda essa promessa resolver antes de continuar.
+
+// Referência: https://deltice.github.io/jest/docs/pt-BR/api.html
 describe('quem sobreviveu?', () => {
   // Adicione seu código aqui
+  // antes da função ser executada e retorna uma promise.
+  beforeEach(() => adventure.randomAttack());
+  // depois da função ser executada e retorna uma promise e imprimi no console.
+  afterEach(() => console.log(adventure.specialists));
 
   test('depois da primeira aventura', () => {
     expect(adventure.specialists.length).toBe(5);
