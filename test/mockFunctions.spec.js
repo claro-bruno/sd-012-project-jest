@@ -1,5 +1,7 @@
 const mockFunctions = require('../src/mockFunctions');
 
+jest.mock('../src/mockFunctions');
+
 /*
 Criamos uma série de funções com eficiência duvidosa.
 Elas estão no arquivo 'src/mockFunctions.js'.
@@ -15,7 +17,26 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('verifica as funções e os mocks', () => {
-  // Crie suas mock functions aqui
+  // Mocks semelhantes ao exemplo de mock function do conteúdo
+  // do Bloco 10 do course.
+  mockFunctions.add.mockImplementation((a, b) => a + b);
+  mockFunctions.subtract.mockImplementation((a, b) => a - b);
+  mockFunctions.multiply.mockImplementation((a, b) => a * b);
+  mockFunctions.divide.mockImplementation((a, b) => a / b);
+  mockFunctions.factorial.mockImplementation((a) => {
+    let fact = 1;
+    for (let index = 1; index <= a; index += 1) {
+      fact *= index;
+    }
+    return fact;
+  });
+  mockFunctions.power.mockImplementation((a, b) => {
+    let pow = 1;
+    for (let index = 1; index <= b; index += 1) {
+      pow *= a;
+    }
+    return pow;
+  });
 
   test('testa função add', () => {
     expect(mockFunctions.add(1, 2)).toEqual(3);
