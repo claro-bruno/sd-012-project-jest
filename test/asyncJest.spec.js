@@ -1,4 +1,3 @@
-//const assert = require('assert');
 const answerPhone = require('../src/asyncJest');
 // const answerPhone = require('../src/asyncJest');
 /*
@@ -10,7 +9,7 @@ a função recebe como parâmetro true e false, respectivamente.
 
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
-describe('o retorno do telefonema', () => { //await/async method für asynchrone Funktionen (funções assincronas)
+describe('o retorno do telefonema', () => { // await/async method für asynchrone Funktionen (funções assincronas)
   test('atende', async () => {
     await expect(answerPhone(true)).resolves.toBe('Oi!');
   });
