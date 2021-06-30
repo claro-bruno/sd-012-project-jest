@@ -37,7 +37,7 @@ const requestReturn = {
 
 describe('verifica o usuário', () => {
   // Crie sua mock da função fetchURL() aqui
-  api.fetchURL = jest.fn().mockImplementation(async () => requestReturn)
+  api.fetchURL = jest.fn().mockImplementation(async () => requestReturn);
 
   test('verifica se o usuário é o tunico', async () => (
     api.fetchURL().then((user) => {
