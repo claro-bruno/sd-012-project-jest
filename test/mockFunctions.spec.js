@@ -68,7 +68,6 @@ describe('verifica as funções e os mocks', () => {
     expect(mockFunctions.power(1, 10)).toEqual(1);
     expect(mockFunctions.power(0, 0)).toEqual(1);
   });
-
   test('testa função factorial', () => {
     mockFunctions.factorial.mockImplementation((a) => {
       let fact = 1;
