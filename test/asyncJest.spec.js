@@ -1,4 +1,4 @@
-const assert = require('assert');
+//const assert = require('assert');
 const answerPhone = require('../src/asyncJest');
 // const answerPhone = require('../src/asyncJest');
 /*
@@ -10,7 +10,7 @@ a função recebe como parâmetro true e false, respectivamente.
 
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
-describe('o retorno do telefonema', () => {
+describe('o retorno do telefonema', () => { //await/async method für asynchrone Funktionen (funções assincronas)
   test('atende', async () => {
     await expect(answerPhone(true)).resolves.toBe('Oi!');
   });
@@ -21,8 +21,7 @@ describe('o retorno do telefonema', () => {
   });
 });
 /*                 Fontes
-  https://jestjs.io/pt-BR/docs/next/asynchronous 
-  extesão Grepper do Google Chrome 
+  https://jestjs.io/pt-BR/docs/next/asynchronous
+  extesão Grepper do Google Chrome
   https://www.w3schools.com/js/js_async.asp
 */
-
