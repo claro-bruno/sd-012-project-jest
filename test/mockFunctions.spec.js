@@ -58,8 +58,13 @@ describe('verifica as funções e os mocks', () => {
     expect(mockFunctions.power(0, 0)).toEqual(1);
   });
   test('testa função factorial', () => {
-    
- 
+    mockFunctions.factorial.mockImplementation((a) => {
+      let factorio = 1;
+      for (let i = 1; i <= a; i += 1) {
+        factorio *= i;
+      }
+      return factorio;
+    });
     expect(mockFunctions.factorial(5)).toEqual(120);
     expect(mockFunctions.factorial(10)).toEqual(3628800);
     expect(mockFunctions.factorial(3)).toEqual(6);
