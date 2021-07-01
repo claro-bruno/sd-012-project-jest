@@ -21,7 +21,7 @@ describe('verifica as funções e os mocks', () => {
     expect(mockFunctions.add(1, 2)).toEqual(3);
     expect(mockFunctions.add(8, 37)).toEqual(45);
     expect(mockFunctions.add(-11, 25)).toEqual(14);
-    expect(mockFunctions.add(13, -188)).toEqual(-175);
+    expect(mockFunctions.add(13, -188)).toEqual(-175);// trailing spaces ?????
     expect(mockFunctions.add(7, 26)).toEqual(33);
   });
   test('testa função subtract', () => {
