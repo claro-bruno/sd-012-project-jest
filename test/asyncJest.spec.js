@@ -16,7 +16,7 @@ describe('o retorno do telefonema', () => {
     // assert.fail();
     // Insira seu teste assíncrono aqui
     expect.assertions(1);
-    return answerPhone('Ola').then((messageOi) => expect(messageOi).toBe('Oi!'));
+    return answerPhone(true).then((messageOi) => expect(messageOi).toBe('Oi!'));
   });
   test('ocupado', () => {
     // assert.fail();
