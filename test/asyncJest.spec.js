@@ -20,7 +20,7 @@ describe('o retorno do telefonema', () => {
   });
   test('ocupado', () => {
     // assert.fail();
-    // Insira seu teste assíncrono aqui
+    // Insira seu teste assíncrono aqu
     expect.assertions(1);
     return answerPhone(false).catch((errorCall) => {
       expect(errorCall).toEqual(new Error('Infelizmente não podemos atender..'));
