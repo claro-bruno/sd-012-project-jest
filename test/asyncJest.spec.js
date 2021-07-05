@@ -14,12 +14,12 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 
 describe('o retorno do telefonema', () => {
   test('atende', () => {
-    assert.fail();
+    // assert.fail();
     expect.assertions(1);
     return answerPhone('atende').then((answer) => expect(answer).toBe('Oi!'));
   });
   test('ocupado', () => {
-    assert.fail();
+    // assert.fail();
     expect.assertions(1);
     return answerPhone()
       .catch((error) => expect(error).toEqual(Error('Infelizmente não podemos atender...')));
