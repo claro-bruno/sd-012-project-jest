@@ -20,25 +20,34 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('quem sobreviveu?', () => {
-  // Adicione seu código aqui
-  adventure.randomAttack();
+  adventure.randomAttack = jest.spyOn(adventure, 'randomAttack');
   test('depois da primeira aventura', () => {
+    adventure.randomAttack();
+    expect(adventure.randomAttack).toHaveBeenCalledTimes(1);
     expect(adventure.specialists.length).toBe(5);
   });
-  adventure.randomAttack();
+  // adventure.randomAttack();
   test('depois da segunda aventura', () => {
+    adventure.randomAttack();
+    expect(adventure.randomAttack).toHaveBeenCalledTimes(2);
     expect(adventure.specialists.length).toBe(4);
   });
-  adventure.randomAttack();
+  // adventure.randomAttack();
   test('depois da terceira aventura', () => {
+    adventure.randomAttack();
+    expect(adventure.randomAttack).toHaveBeenCalledTimes(3);
     expect(adventure.specialists.length).toBe(3);
   });
-  adventure.randomAttack();
+  // adventure.randomAttack();
   test('depois da quarta aventura', () => {
+    adventure.randomAttack();
+    expect(adventure.randomAttack).toHaveBeenCalledTimes(4);
     expect(adventure.specialists.length).toBe(2);
   });
-  adventure.randomAttack();
+  // adventure.randomAttack();
   test('depois da quinta aventura', () => {
+    adventure.randomAttack();
+    expect(adventure.randomAttack).toHaveBeenCalledTimes(5);
     expect(adventure.specialists.length).toBe(1);
   });
 });
