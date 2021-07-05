@@ -11,6 +11,7 @@ a função recebe como parâmetro true e false, respectivamente.
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 // https://jestjs.io/pt-BR/docs/asynchronous
+// https://stackoverflow.com/questions/46042613/how-to-test-the-type-of-a-thrown-exception-in-jest
 describe('o retorno do telefonema', () => {
   test('atende', async () => {
     // assert.fail();
@@ -19,6 +20,8 @@ describe('o retorno do telefonema', () => {
   });
   test('ocupado', async () => {
     // assert.fail();
-    expect(answerPhone(false)).rejects.toMatch('Infelizmente não podemos atender...');
+    // const naoResponde = await answerPhone(false);
+    await expect(answerPhone(false)).rejects
+    .toThrow('Infelizmente não podemos atender...');
   });
 });
