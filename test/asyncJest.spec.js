@@ -11,16 +11,16 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('o retorno do telefonema', () => {
-  test('atende', () => { 
-  expect.assertions(1);
+  test('atende', () => {
+    expect.assertions(1);
 
-  return expect(answerPhone(true))
-  .resolves.toEqual('Oi!');
+    return expect(answerPhone(true))
+      .resolves.toEqual('Oi!');
   });
-  test('ocupado', () => { 
+  test('ocupado', () => {
     expect.assertions(1);
 
     return expect(answerPhone(false)).rejects
-    .toThrowError(new Error('Infelizmente não podemos atender...'));
+      .toThrowError(new Error('Infelizmente não podemos atender...'));
   });
 });

@@ -59,3 +59,8 @@ describe('verifica as funções e os mocks', () => {
     expect(mockFunctions.factorial(2)).toEqual(2);
   });
 });
+
+/*
+Para ativar o mockImplementation eu olhei o código do Thales Carneiro,
+pois não sabia que tinha que usar jest.fn() antes do comando citado.
+*/
