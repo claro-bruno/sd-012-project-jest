@@ -17,12 +17,14 @@ describe('o retorno do telefonema', () => {
   test('atende', () => {
     answerPhone(true).then((message) => {
       expect(message).toBe('Oi!');
-    });
+    })
+      .catch();
   });
   test('ocupado', () => {
-    answerPhone(false).then((reject) => {
-      expect(reject).toThrow();
-      expect(reject).toThrowError(new Error('Infelizmente não podemos atender...'));
-    });
+    answerPhone(false).then()
+      .catch((reject) => {
+        expect(reject).toThrow();
+        expect(reject).toThrowError(new Error('Infelizmente não podemos atender...'));
+      });
   });
 });
