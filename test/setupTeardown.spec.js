@@ -2,7 +2,6 @@ const adventure = require('../src/setupTeardown');
 
 describe('quem sobreviveu?', () => {
   beforeEach(() => {
-    console.log(adventure.specialists);
     adventure.randomAttack();
   });
   test('depois da primeira aventura', () => {
