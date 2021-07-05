@@ -15,6 +15,7 @@ O foco aqui é a utilização de mock functions.
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 // https://jestjs.io/pt-BR/docs/mock-functions
+// feito com ajuda do  amigo Jessandro
 describe('verifica as funções e os mocks', () => {
   // Crie suas mock functions aqui
   mockFunctions.add = jest.fn()
