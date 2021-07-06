@@ -18,13 +18,15 @@ describe('o retorno do telefonema', () => {
     answerPhone(true).then((message) => {
       expect(message).toBe('Oi!');
     })
-      .catch();
+      .catch((error) => console.log(error.message));
   });
   test('ocupado', () => {
-    answerPhone(false).then()
-      .catch((reject) => {
-        expect(reject).toThrow();
-        expect(reject).toThrowError(new Error('Infelizmente não podemos atender...'));
-      });
+    expect(() => answerPhone().toThrow());
+    expect(() => answerPhone().toThrowError(new Error('Infelizmente não podemos atender...')));
+    // answerPhone(false).then((mensagem) => console.log(mensagem))
+    //   .catch((reject) => {
+    //     expect(reject).toBe(new Error('Infelizmente não podemos atender...'));
+    //     console.log(reject.mensagem);
+    //   });
   });
 });
