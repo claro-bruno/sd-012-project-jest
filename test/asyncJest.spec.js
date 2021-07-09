@@ -10,7 +10,6 @@ a função recebe como parâmetro true e false, respectivamente.
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
-// consultei o repositório da Camila Malvessi de onde tirei a ideia do  para resolver a parte do test ocupado. https://github.com/tryber/sd-012-project-jest/tree/camila-malvessi-project-jest
 describe('o retorno do telefonema', () => {
   test('atende', async () => {
     expect.assertions(1);
