@@ -17,7 +17,7 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 // Para entender o fatorial consultei o site  https://serprogramador.com.br/artigos/topico/javascript/Como-calcular-a-operacao-matematica-de-fatorial-com-JavaScript
-// recebi ajuda do meu amigo kelvin Wevertor https://github.com/KelvinWevertor 
+// recebi ajuda do meu amigo kelvin Wevertor https://github.com/KelvinWevertor
 
 describe('verifica as funções e os mocks', () => {
   mockFunctions.add.mockImplementation((a, b) => a + b);
