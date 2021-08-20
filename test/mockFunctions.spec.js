@@ -30,10 +30,11 @@ describe('verifica as funções e os mocks', () => {
     return factorial;
   });
   mockFunctions.power.mockImplementation((powers, exponents) => {
+    if (exponents === 0) return 1;
+    if (exponents === 1) return powers;
+
     let result = powers;
     for (let index = exponents; index > 1; index -= 1) {
-      console.log(result);
-      console.log(powers);
       result *= powers;
     }
     return result;
